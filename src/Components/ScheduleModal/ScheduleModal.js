@@ -113,17 +113,11 @@ const ScheduleModal = () => {
       !hoursPerDay ||
       selectedDays.length === 0
     ) {
-      console.log("Не все данные заданы для расчета даты окончания");
       return;
     }
 
     let hoursLeft = totalHours;
     let currentDate = moment(startDate);
-
-    console.log(
-      "Начало расчета даты окончания",
-      currentDate.format("DD.MM.YYYY")
-    );
 
     while (hoursLeft > 0) {
       const currentDay = currentDate.day();
@@ -133,11 +127,6 @@ const ScheduleModal = () => {
 
       if (isSelectedDay) {
         hoursLeft -= hoursPerDay;
-        console.log(
-          `Учебный день: ${currentDate.format(
-            "DD.MM.YYYY"
-          )}, Часов осталось: ${hoursLeft}`
-        );
       }
 
       if (hoursLeft > 0) {
@@ -145,7 +134,6 @@ const ScheduleModal = () => {
       }
     }
 
-    console.log("Дата окончания:", currentDate.format("DD.MM.YYYY"));
     setEndDate(currentDate);
   }, [startDate, totalHours, hoursPerDay, selectedDays]);
 
