@@ -219,7 +219,7 @@ const ScheduleModal = () => {
       </Row>
 
       <Modal
-        title="Редактирование расписания"
+        title="Добавление расписания"
         open={visible}
         onOk={handleOk}
         onCancel={handleCancel}
@@ -232,7 +232,7 @@ const ScheduleModal = () => {
             <Col span={12}>
               <Form.Item label="Название группы" name="groupName">
                 <Input
-                  placeholder="Онлайн школа"
+                  placeholder="Введите название"
                   style={{ fontSize: "16px", height: "40px" }}
                 />
               </Form.Item>
