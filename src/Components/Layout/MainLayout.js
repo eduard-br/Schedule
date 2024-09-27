@@ -9,8 +9,8 @@ const MainLayout = ({ children }) => {
   const currentPath = location.pathname;
 
   const menuItems = [
-    { label: <Link to="/">Home</Link>, key: "/" },
-    { label: <Link to="/schedule">Schedule</Link>, key: "/schedule" },
+    { label: <Link to="/">Главная</Link>, key: "/" },
+    { label: <Link to="/schedule">Расписание</Link>, key: "/schedule" },
   ];
 
   return (
